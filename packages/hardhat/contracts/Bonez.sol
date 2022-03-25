@@ -6,15 +6,28 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 //learn more: https://docs.openzeppelin.com/contracts/3.x/erc721
 
-// GET LISTED ON OPENSEA: https://testnets.opensea.io/get-listed/step-two
+/*
+.-. .-')                    .-') _   ('-.     .-') _  
+\  ( OO )                  ( OO ) )_(  OO)   (  OO) ) 
+ ;-----.\  .-'),-----. ,--./ ,--,'(,------.,(_)----.  
+ | .-.  | ( OO'  .-.  '|   \ |  |\ |  .---'|       |  
+ | '-' /_)/   |  | |  ||    \|  | )|  |    '--.   /   
+ | .-. `. \_) |  |\|  ||  .     |/(|  '--. (_/   /    
+ | |  \  |  \ |  | |  ||  |\    |  |  .--'  /   /___  
+ | '--'  /   `'  '-'  '|  | \   |  |  `---.|        | 
+ `------'      `-----' `--'  `--'  `------'`--------' 
+ Made by @blind_nabler with scaffold-eth
+ Fork this project on github!
 
-contract Bonezreal is ERC721  {
+*/
+
+contract Bonez is ERC721  {
 
   mapping (uint256 => uint256) public death;
   mapping (uint256 => uint256) public uriRef;
   event minted(address owner, uint256 tokenId);
   address public constant blindNabler = 0x807a1752402D21400D555e1CD7f175566088b955;
-  uint256 public price = 0.001 ether;
+  uint256 public price = 1 ether;
 
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
@@ -80,6 +93,5 @@ contract Bonezreal is ERC721  {
   }
       return string(abi.encodePacked(base, uint2str(_tokenURI), ".json"));
 }
-
 
 }
