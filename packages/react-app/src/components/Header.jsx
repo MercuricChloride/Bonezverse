@@ -10,7 +10,7 @@ export default function Header() {
       <PageHeader
         title="🧟💀 Bonez"
         subTitle="Immutable Randomized Decaying Corpses!"
-        style={{ cursor: "pointer", backgroundColor: "black" }}
+        style={{ cursor: "pointer"}}
       />
     </a>
   );
